@@ -212,12 +212,12 @@ class Character:
         stock_values = sum([self.player_stocks[i] * random.randint(0, 3) for i in range(4)])  # Сумма всех акций игрока
         crash_value = random.randint(0, 3)  # Случайное значение краха рынка
 
-        print("Фондовый рынок рушится! Каждая ваша акция теперь стоит", crash_value)
+        print("STOCK MARKET CRASH!!!  EACH OF YOUR", crash_value)
 
         money_from_stocks = stock_values * crash_value
         self.earn_money((abs(money_from_stocks)) * -1)   # Деньги, полученные от продажи акций после краха рынка
 
-        print("Вы продали все ваши акции за", money_from_stocks)
+        print("STOCK IS WORTH! YOU MUST SELL ALL OF THEM! FOR A TOTAL OF:", money_from_stocks)
 
     def random_event(self, last_event_date):
         current_year = datetime.datetime.now().year
